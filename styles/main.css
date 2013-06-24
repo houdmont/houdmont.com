@@ -377,6 +377,29 @@ body {
     padding-right: 0;
 }
 
+.grid.padded {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.grid.padded:hover {
+    background-color: #ececec;
+    -webkit-box-shadow: 0 0 0 10px #ececec, 0 0 20px 5px #888888;
+    -moz-box-shadow: 0 0 0 10px #ececec, 0 0 20px 5px #888888;
+    box-shadow: 0 0 0 10px #ececec, 0 0 20px 5px #888888;
+}
+
+.grid.padded a {
+    display: block;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .grid.padded {
+        margin-bottom: 2em;
+    }
+}
+    
 @media only screen and (max-width:767px) {
     .grid [class*=col-], .grid [class*=col-].padding {
         width: auto;
@@ -1656,3 +1679,6 @@ div#body-container {
     }
 }
 
+.about .row {
+    margin-bottom: 2em;
+}
