@@ -903,10 +903,12 @@ ul.items li:hover .description * {
     padding: 48px 0 43px;
 }
 @media only screen and (max-width:480px) {
-    #menu {
-    padding: 20px 0;
+    /*#menu {
+        padding: 20px 0;
+    }*/
 }
-}#menu:first-child {
+
+#menu:first-child {
     padding-right: 20px;
 }
 #logo+#menu {
@@ -920,8 +922,14 @@ ul.items li:hover .description * {
 }
 #menu a {
     white-space: nowrap;
-    cursor: default;
+    cursor: pointer;
 }
+
+#menu a:hover {
+    background: #00c492;
+    color: white !important;
+}
+
 [data-idevice=false] #menu a[href], [data-idevice=true] #menu a {
     cursor: pointer;
 }
@@ -1048,8 +1056,11 @@ ul.items li:hover .description * {
 #menu.shrink>.submenu>ul>.submenu+li {
     margin-top: 10px;
 }
-#menu.full>li>ul>.submenu>ul a[href]:hover, #menu.shrink>.submenu>ul a[href]:hover, #menu.full>li>ul>.submenu>ul li.current-menu-item>a, #menu.shrink>.submenu>ul li.current-menu-item>a {
-    color: #333;
+#menu.full>li>ul>.submenu>ul a[href]:hover, 
+#menu.shrink>.submenu>ul a[href]:hover, 
+#menu.full>li>ul>.submenu>ul li.current-menu-item>a, 
+#menu li.current-menu-item>a {
+    color: white !important;
     background-color: #00c492;
 }
 #logo {
@@ -1676,6 +1687,24 @@ div#body-container {
 @media only screen and (max-width: 767px) {
     div#body-container {
         padding-top: 1em;
+    }
+
+    #footer_bottom ul.row {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+        #menu > li.submenu > a {
+        display: block;
+    }
+
+    #menu > li > ul {
+        display: none;
+    }
+
+    #header .container {
+        min-height: 0;
     }
 }
 
